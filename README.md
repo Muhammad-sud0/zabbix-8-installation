@@ -4,18 +4,6 @@ A step-by-step guide to installing and configuring **Zabbix 8.0** with **MySQL**
 
 > **Repository note:** The repository package URL in this guide targets Ubuntu 26.04. Confirm that this matches the Ubuntu release installed on your server before proceeding.
 
-## Video Demonstration
-
-The following video provides a practical walkthrough of the Zabbix 8.0 installation and initial configuration on Ubuntu.
-
-![Zabbix 8.0 Installation](screenshots/01-zabbix-dashboard.png)
-
-**Watch the full installation tutorial on YouTube:**
-
-[Zabbix 8.0 Installation on Ubuntu | Step-by-Step Guide](https://youtu.be/2-hw971da6I)
-
-> The video is publicly accessible on YouTube.
-
 ## Table of Contents
 
 - [1. Update the System and Add the Zabbix Repository](#1-update-the-system-and-add-the-zabbix-repository)
@@ -26,6 +14,7 @@ The following video provides a practical walkthrough of the Zabbix 8.0 installat
 - [6. Configure the Firewall and PHP-FPM](#6-configure-the-firewall-and-php-fpm)
 - [7. Start and Enable Zabbix Services](#7-start-and-enable-zabbix-services)
 - [8. Complete the Web Setup Wizard](#8-complete-the-web-setup-wizard)
+- [Installation Screenshots](#installation-screenshots)
 - [Post-installation Checks](#post-installation-checks)
 
 ---
@@ -42,7 +31,7 @@ sudo apt install -y wget
 ### 1.2 Download and install the Zabbix 8.0 repository package
 
 ```bash
-wget https://repo.zabbix.com/zabbix/8.0/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_8.0+ubuntu26.04_all.deb
+wget [https://repo.zabbix.com/zabbix/8.0/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_8.0+ubuntu26.04_all.deb](https://repo.zabbix.com/zabbix/8.0/release/ubuntu/pool/main/z/zabbix-release/zabbix-release_latest_8.0+ubuntu26.04_all.deb)
 sudo dpkg -i zabbix-release_latest_8.0+ubuntu26.04_all.deb
 sudo apt update
 sudo apt upgrade -y
@@ -232,6 +221,29 @@ Follow the wizard:
 4. **Settings:** Enter a descriptive Zabbix server name (for example, `My Monitoring SVR`) and select your default time zone.
 5. **Pre-installation summary:** Review the configuration and click **Next step**, then **Finish**.
 
+---
+
+## Installation Screenshots
+
+Here is a visual reference of the Zabbix 8.0 installation steps and dashboard:
+
+### 1. Package Installation
+![Package Installation](screenshots/02-package-installation.png)
+
+### 2. Zabbix Server Configuration
+![Zabbix Server Configuration](screenshots/04-database-configuration.png)
+
+### 3. Zabbix Frontend Setup Wizard
+![Zabbix Frontend Setup](screenshots/07-zabbix-frontend-login.png)
+
+### 4. Zabbix Hosts Overview
+![Zabbix Hosts Overview](screenshots/03-zabbix-components.png)
+
+### 5. Zabbix Global View Dashboard
+![Zabbix Dashboard](screenshots/01-zabbix-dashboard.png)
+
+---
+
 ## Post-installation Checks
 
 ### 1. Log in to Zabbix
@@ -248,7 +260,6 @@ Use the default administrator credentials:
 ### 2. Change the administrator password
 
 Navigate to:
-
 **Users → Users → Admin**
 
 Update the default password to a strong, unique password.
@@ -256,48 +267,6 @@ Update the default password to a strong, unique password.
 ### 3. Verify the Zabbix server
 
 Navigate to:
-
 **Monitoring → Hosts**
 
 Confirm that the local Zabbix server is listed and displays a green **ZBX availability** icon.
-
----
-
-
-## Installation Screenshots
-
-The following screenshots were extracted from the installation recording and show selected stages of the deployment. They are provided as visual references alongside the written instructions.
-
-### Package installation
-## Zabbix Dashboard
-
-The following screenshot shows the successfully
-installed Zabbix 8.0 monitoring dashboard.
-
-![Zabbix 8.0 Global View](screenshots/01-zabbix-dashboard.png)
-
-![Zabbix package installation](screenshots/02-package-installation.png)
-
-### Zabbix components installation
-
-![Zabbix components installation](screenshots/03-zabbix-components.png)
-
-### MySQL database configuration
-
-![MySQL database configuration](screenshots/04-database-configuration.png)
-
-### Zabbix server configuration
-
-![Zabbix server configuration](screenshots/05-zabbix-server-configuration.png)
-
-### Database import and firewall configuration
-
-![Database import and firewall](screenshots/06-database-import-and-firewall.png)
-
-### Zabbix frontend login
-
-![Zabbix frontend login](screenshots/07-zabbix-frontend-login.png)
-
-## Completion
-
-The Zabbix 8.0 installation and initial frontend configuration are complete once you can log in, change the default administrator password, and confirm that the local Zabbix server is available.
