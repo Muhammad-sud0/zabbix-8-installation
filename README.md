@@ -225,22 +225,15 @@ Follow the wizard:
 
 ## Installation Screenshots
 
-Here is a visual reference of the Zabbix 8.0 installation steps and dashboard:
+![](screenshots/02-package-installation.png)
 
-### 1. Package Installation
-![Package Installation](screenshots/02-package-installation.png)
+![](screenshots/04-database-configuration.png)
 
-### 2. Zabbix Server Configuration
-![Zabbix Server Configuration](screenshots/04-database-configuration.png)
+![](screenshots/07-zabbix-frontend-login.png)
 
-### 3. Zabbix Frontend Setup Wizard
-![Zabbix Frontend Setup](screenshots/07-zabbix-frontend-login.png)
+![](screenshots/03-zabbix-components.png)
 
-### 4. Zabbix Hosts Overview
-![Zabbix Hosts Overview](screenshots/03-zabbix-components.png)
-
-### 5. Zabbix Global View Dashboard
-![Zabbix Dashboard](screenshots/01-zabbix-dashboard.png)
+![](screenshots/01-zabbix-dashboard.png)
 
 ---
 
